@@ -1,0 +1,147 @@
+/* General Reset and Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff9a8b, #fecfef); /* Gradient for the entire page */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Button to Open the Modal */
+.open-modal-btn {
+  padding: 14px 28px;
+  font-size: 18px;
+  color: white;
+  background-color: #00aaff; /* Light blue button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.open-modal-btn:hover {
+  background-color: #007b8c;
+  transform: scale(1.1); /* Slight hover effect */
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #6a11cb, #2575fc); /* Modal gradient background */
+  color: white;
+  width: 80%;
+  max-width: 550px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  resize: none;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #00aaff;
+  outline: none;
+}
+
+.word-count {
+  font-size: 14px;
+  color: #e6e6e6;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  background-color: #32CD32; /* Green submit button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #28a745;
+  transform: scale(1.05);
+}
+
+/* Close Button Styling */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ffcc00;
+}
+
+/* Modal Slide and Fade Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
